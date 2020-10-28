@@ -14,6 +14,40 @@ namespace MCL_Adminer
 			{
 				listBox1.Items.Add(user.fullName);
 			}
+            button1.Click += Button1_Click;
+            button2.Click += Button2_Click;
+            button3.Click += Button3_Click;
 		}
-	}
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            //throw new NotImplementedException();
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            UserForm form = new UserForm();
+            if(listBox1.SelectedItem != null)
+            {
+                foreach(User user in Globals.UserList)
+                {
+                    if(listBox1.SelectedItem.ToString() == user.fullName)
+                    {
+                        form.WorkingUser = user;
+                    }
+                }
+                form.Show();
+                Hide();
+            }
+
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            UserForm form = new UserForm();
+            form.WorkingUser = new User();
+            form.Show();
+            Hide();
+        }
+    }
 }

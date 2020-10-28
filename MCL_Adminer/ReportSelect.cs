@@ -56,7 +56,7 @@ namespace MCL_Adminer
 					string selectedDate = listBox2.SelectedItem.ToString();
 					if (selectedDate != null)
 					{
-						PrintReport printReport = new PrintReport();
+						PrintReport printReport = FormProvider.PrintReport;
 						printReport.Report(uid, selectedDate);
 						printReport.Show();
                         Hide();

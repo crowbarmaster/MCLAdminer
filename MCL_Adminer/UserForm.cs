@@ -5,18 +5,50 @@ using System.Windows.Forms;
 
 namespace MCL_Adminer
 {
-	// Token: 0x02000003 RID: 3
 	public partial class UserForm : Form
 	{
-		// Token: 0x06000009 RID: 9 RVA: 0x00002B7E File Offset: 0x00000D7E
+		public User WorkingUser = null;
 		public UserForm()
 		{
 			InitializeComponent();
+			Shown += OnShow;
+			button1.Click += delegate (object sender, EventArgs e) {button1_Click(sender, e);};
+			button2.Click += delegate (object sender, EventArgs e) {button2_Click(sender, e);};
+			FormClosing += delegate (object o, FormClosingEventArgs e)
+			{
+				ManageUsers users = FormProvider.ManageUsers;
+				users.Show();
+				Dispose();
+			};
 		}
 
-		// Token: 0x0600000A RID: 10 RVA: 0x00002B96 File Offset: 0x00000D96
-		private void label2_Click(object sender, EventArgs e)
+		private void OnShow(object sender, EventArgs e)
 		{
+			if(WorkingUser != null)
+            {
+				textBox1.Text = WorkingUser.id;
+				textBox1.Enabled = false;
+				textBox2.Text = WorkingUser.shift;
+				textBox3.Text = WorkingUser.firstName;
+				textBox4.Text = WorkingUser.lastName;
+				textBox5.Text = WorkingUser.bldg;
+            }
+            else
+            {
+				WorkingUser = new User();
+            }
 		}
+
+		private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+		private void button2_Click(object sender, EventArgs e)
+        {
+			UserRoomSelect select = new UserRoomSelect();
+			select.user = WorkingUser;
+			select.Show();
+        }
 	}
 }

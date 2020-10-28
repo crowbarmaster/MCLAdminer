@@ -36,14 +36,14 @@ namespace MCL_Adminer
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			RoomForm form = new RoomForm();
+			RoomForm form = FormProvider.RoomForm;
 			form.Show();
             Hide();
 		}
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			RoomForm form = new RoomForm();
+			RoomForm form = FormProvider.RoomForm;
 			if (listBox1.SelectedItem != null)
 			{
 				foreach (Room room in Globals.RoomList)
@@ -57,11 +57,9 @@ namespace MCL_Adminer
                 Hide();
 			}
 		}
-
-		// Token: 0x06000016 RID: 22 RVA: 0x0000365C File Offset: 0x0000185C
 		private void button3_Click(object sender, EventArgs e)
 		{
-			RoomForm form = new RoomForm();
+			RoomForm form = FormProvider.RoomForm;
 			if (listBox1.SelectedItem != null)
 			{
 				foreach (Room room in Globals.RoomList)

@@ -7,14 +7,23 @@ namespace MCL_Adminer
 {
 	public partial class RoomForm : Form
 	{
+		private SQLHandler SQLHandler = new SQLHandler();
+		public Room WorkingRoom = null;
+		private string[] bools = new string[]
+		{
+			"Has student desks",
+			"Has teacher desk(s)",
+			"Has hard floor",
+			"Has carpet(s)",
+			"Has/is bathroom",
+			"Has sanitizer"
+		};
+
 		public RoomForm()
 		{
 			InitializeComponent();
             Shown += OnShow;
-			button1.Click += delegate(object sender, EventArgs e)
-			{
-				button1_Click(sender, e);
-			};
+			button1.Click += delegate(object sender, EventArgs e){button1_Click(sender, e);};
             FormClosing += delegate(object o, FormClosingEventArgs e)
 			{
 				ManageRooms rooms = FormProvider.ManageRooms;
@@ -141,17 +150,5 @@ namespace MCL_Adminer
 				}
 			}
 		}
-
-		private SQLHandler SQLHandler = new SQLHandler();
-		public Room WorkingRoom = null;
-		private string[] bools = new string[]
-		{
-			"Has student desks",
-			"Has teacher desk(s)",
-			"Has hard floor",
-			"Has carpet(s)",
-			"Has/is bathroom",
-			"Has sanitizer"
-		};
 	}
 }
