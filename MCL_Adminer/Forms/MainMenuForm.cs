@@ -32,23 +32,21 @@ namespace MCL_Adminer
 
 		public void button1_Click(object sender, EventArgs e)
 		{
-			ReportSelect report = FormProvider.ReportSelect;
+			
             Hide();
-			report.Show();
+			FormProvider.ReportSelect.Show();
 		}
 
 		public void button2_Click(object sender, EventArgs e)
 		{
-			ManageUsers manage = FormProvider.ManageUsers;
 			Hide();
-			manage.Show();
+			FormProvider.ManageUsers.Show();
 		}
 
 		public void button3_Click(object sender, EventArgs e)
 		{
-			ManageRooms room = FormProvider.ManageRooms;
 			Hide();
-			room.Show();
+			FormProvider.ManageRooms.Show();
 		}
 	}
 }

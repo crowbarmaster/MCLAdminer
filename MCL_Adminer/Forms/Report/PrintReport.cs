@@ -19,8 +19,7 @@ namespace MCL_Adminer
 			button2.Click += button2_Click;
             FormClosing += delegate(object o, FormClosingEventArgs e)
 			{
-				MainMenuForm main = FormProvider.MainMenu;
-				main.Show();
+				FormProvider.MainMenu.Show();
 			};
 		}
 		public string MakeTwo(int input)

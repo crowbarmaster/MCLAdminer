@@ -26,8 +26,7 @@ namespace MCL_Adminer
 			button1.Click += delegate(object sender, EventArgs e){button1_Click(sender, e);};
             FormClosing += delegate(object o, FormClosingEventArgs e)
 			{
-				ManageRooms rooms = FormProvider.ManageRooms;
-				rooms.Show();
+				FormProvider.ManageRooms.Show();
                 Dispose();
 			};
 			foreach (string check in bools)
@@ -91,8 +90,7 @@ namespace MCL_Adminer
 					};
 					SQLHandler.Update("rooms", sqlData, cond);
 					Console.WriteLine("Updated WorkingRoom ref!");
-					ManageRooms rooms = FormProvider.ManageRooms;
-					rooms.Show();
+					FormProvider.ManageRooms.Show();
                     Dispose();
 				}
 			}
@@ -144,8 +142,7 @@ namespace MCL_Adminer
 						"'" + new string(data2) + "'"
 					};
 					SQLHandler.Insert("rooms", Keys, Vals);
-					ManageRooms rooms2 = FormProvider.ManageRooms;
-					rooms2.Show();
+					FormProvider.ManageRooms.Show();
                     Dispose();
 				}
 			}

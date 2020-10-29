@@ -19,8 +19,7 @@ namespace MCL_Adminer
             button3.Click += Button3_Click;
             FormClosing += delegate (object o, FormClosingEventArgs e)
             {
-                MainMenuForm main = FormProvider.MainMenu;
-                main.Show();
+                FormProvider.MainMenu.Show();
                 Dispose();
             };
         }
@@ -32,17 +31,16 @@ namespace MCL_Adminer
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            UserForm form = FormProvider.UserForm;
             if(listBox1.SelectedItem != null)
             {
                 foreach(User user in Globals.UserList)
                 {
                     if(listBox1.SelectedItem.ToString() == user.fullName)
                     {
-                        form.WorkingUser = user;
+                        FormProvider.UserForm.WorkingUser = user;
                     }
                 }
-                form.Show();
+                FormProvider.UserForm.Show();
                 Hide();
             }
 
@@ -50,9 +48,8 @@ namespace MCL_Adminer
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            UserForm form = FormProvider.UserForm;
-            form.WorkingUser = new User();
-            form.Show();
+            FormProvider.UserForm.WorkingUser = new User();
+            FormProvider.UserForm.Show();
             Hide();
         }
     }

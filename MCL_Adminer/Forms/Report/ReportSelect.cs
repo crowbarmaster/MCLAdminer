@@ -18,8 +18,7 @@ namespace MCL_Adminer
 			button1.Click += button1_Click;
             FormClosing += delegate(object o, FormClosingEventArgs e)
 			{
-				MainMenuForm main = FormProvider.MainMenu;
-				main.Show();
+				FormProvider.MainMenu.Show();
 			};
 		}
 		public void listbox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -56,9 +55,8 @@ namespace MCL_Adminer
 					string selectedDate = listBox2.SelectedItem.ToString();
 					if (selectedDate != null)
 					{
-						PrintReport printReport = FormProvider.PrintReport;
-						printReport.Report(uid, selectedDate);
-						printReport.Show();
+						FormProvider.PrintReport.Report(uid, selectedDate);
+						FormProvider.PrintReport.Show();
                         Hide();
 					}
 				}

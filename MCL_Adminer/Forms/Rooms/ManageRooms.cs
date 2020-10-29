@@ -28,38 +28,34 @@ namespace MCL_Adminer
 			};
             FormClosing += delegate(object o, FormClosingEventArgs e)
 			{
-				MainMenuForm main = FormProvider.MainMenu;
-				main.Show();
+				FormProvider.MainMenu.Show();
                 Dispose();
 			};
 		}
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			RoomForm form = FormProvider.RoomForm;
-			form.Show();
+			FormProvider.RoomForm.Show();
             Hide();
 		}
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			RoomForm form = FormProvider.RoomForm;
 			if (listBox1.SelectedItem != null)
 			{
 				foreach (Room room in Globals.RoomList)
 				{
 					if (listBox1.SelectedItem.ToString() == room.ID)
 					{
-						form.WorkingRoom = room;
+						FormProvider.RoomForm.WorkingRoom = room;
 					}
 				}
-				form.Show();
+				FormProvider.RoomForm.Show();
                 Hide();
 			}
 		}
 		private void button3_Click(object sender, EventArgs e)
 		{
-			RoomForm form = FormProvider.RoomForm;
 			if (listBox1.SelectedItem != null)
 			{
 				foreach (Room room in Globals.RoomList)

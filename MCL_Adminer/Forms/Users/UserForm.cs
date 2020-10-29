@@ -16,8 +16,7 @@ namespace MCL_Adminer
 			button2.Click += delegate (object sender, EventArgs e) {button2_Click(sender, e);};
 			FormClosing += delegate (object o, FormClosingEventArgs e)
 			{
-				ManageUsers users = FormProvider.ManageUsers;
-				users.Show();
+				FormProvider.ManageUsers.Show();
 				Dispose();
 			};
 		}
@@ -46,9 +45,8 @@ namespace MCL_Adminer
 
 		private void button2_Click(object sender, EventArgs e)
         {
-			UserRoomSelect select = FormProvider.UserRoomSelect;
-			select.user = WorkingUser;
-			select.Show();
+			FormProvider.UserRoomSelect.user = WorkingUser;
+			FormProvider.UserRoomSelect.Show();
         }
 	}
 }

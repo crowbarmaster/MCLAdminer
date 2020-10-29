@@ -16,8 +16,7 @@ namespace MCL_Adminer
             Shown += OnShown;
             FormClosing += delegate (object o, FormClosingEventArgs e)
             {
-                UserForm users = FormProvider.UserForm;
-                users.Show();
+                FormProvider.UserForm.Show();
                 Dispose();
             };
         }
@@ -64,8 +63,7 @@ namespace MCL_Adminer
             {
                 user.rooms = listBox1.Items.OfType<string>().ToArray();
             }
-            UserForm userForm = FormProvider.UserForm;
-            userForm.Show();
+            FormProvider.UserForm.Show();
             Dispose();
         }
 
