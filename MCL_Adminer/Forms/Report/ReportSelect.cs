@@ -21,6 +21,7 @@ namespace MCL_Adminer
         }
         public void listbox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            listBox2.Items.Clear();
             foreach (User user in Globals.UserList)
             {
                 if (user.fullName == listBox1.SelectedItem.ToString())
