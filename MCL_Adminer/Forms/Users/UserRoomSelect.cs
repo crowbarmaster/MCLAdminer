@@ -29,11 +29,11 @@ namespace MCL_Adminer
                 listBox2.Items.Add(listBox1.SelectedItem);
                 listBox1.Items.Remove(listBox1.SelectedItem);
             }
-            if (index >= listBox1.Items.Count)
+            if (index > 0 && index <= listBox1.Items.Count)
             {
                 listBox1.SetSelected(index - 1, true);
             }
-            else if (listBox1.Items.Count > 0)
+            else if (index == 0)
             {
                 listBox1.SetSelected(index, true);
             }
@@ -46,11 +46,11 @@ namespace MCL_Adminer
             {
                 listBox1.Items.Add(listBox2.SelectedItem);
                 listBox2.Items.Remove(listBox2.SelectedItem);
-                if (index >= listBox2.Items.Count)
+                if (index > 0 && index <= listBox2.Items.Count)
                 {
                     listBox2.SetSelected(index - 1, true);
                 }
-                else if (listBox2.Items.Count > 0)
+                else if (index == 0)
                 {
                     listBox2.SetSelected(index, true);
                 }
@@ -61,7 +61,7 @@ namespace MCL_Adminer
         {
             if (user != null && listBox2.Items.Count > 0)
             {
-                user.rooms = listBox1.Items.OfType<string>().ToArray();
+                user.rooms = listBox2.Items.OfType<string>().ToArray();
             }
             FormProvider.UserForm.Show();
             Dispose();

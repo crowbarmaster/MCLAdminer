@@ -39,7 +39,7 @@ namespace MCL_Adminer
             return "";
         }
 
-        public string id = "null";
+        public string id = "NA";
         public string firstName = "";
         public string lastName = "";
         public string fullName = "";
