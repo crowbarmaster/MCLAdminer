@@ -24,7 +24,7 @@ namespace MCL_Adminer
                 listBox2.Items.Add(listBox1.SelectedItem);
                 listBox1.Items.Remove(listBox1.SelectedItem);
             }
-            if (index > listBox1.Items.Count)
+            if (index >= listBox1.Items.Count)
             {
                 listBox1.SetSelected(index - 1, true);
             }
@@ -41,7 +41,7 @@ namespace MCL_Adminer
             {
                 listBox1.Items.Add(listBox2.SelectedItem);
                 listBox2.Items.Remove(listBox2.SelectedItem);
-                if (index > listBox2.Items.Count)
+                if (index >= listBox2.Items.Count)
                 {
                     listBox2.SetSelected(index - 1, true);
                 }
