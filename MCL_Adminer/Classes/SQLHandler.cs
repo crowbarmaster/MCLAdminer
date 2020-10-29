@@ -16,10 +16,10 @@ namespace MCL_Adminer
 
 		private void Initialize()
 		{
-			server = "10.0.0.98";
+			server = "69.207.170.153";
 			database = "mcl_db";
 			uid = "mcl_db";
-			port = "3306";
+			port = "8236";
 			password = "MidlakesDB1.";
 			string connectionString = "server="+server+";UID="+uid+";database="+database+";port="+port+";password="+password;
 			connection = new MySqlConnection(connectionString);
