@@ -1,9 +1,7 @@
 ﻿namespace MCL_Adminer
 {
-	// Token: 0x02000008 RID: 8
 	public partial class PrintReport : global::System.Windows.Forms.Form
 	{
-		// Token: 0x06000028 RID: 40 RVA: 0x00004BB8 File Offset: 0x00002DB8
 		protected override void Dispose(bool disposing)
 		{
 			bool flag = disposing && this.components != null;
@@ -14,7 +12,6 @@
 			base.Dispose(disposing);
 		}
 
-		// Token: 0x06000029 RID: 41 RVA: 0x00004BF0 File Offset: 0x00002DF0
 		private void InitializeComponent()
 		{
 			this.dataGridView1 = new global::System.Windows.Forms.DataGridView();
@@ -137,50 +134,20 @@
 			((global::System.ComponentModel.ISupportInitialize)this.dataGridView1).EndInit();
 			base.ResumeLayout(false);
 		}
-
-		// Token: 0x0400003A RID: 58
 		private global::System.ComponentModel.IContainer components = null;
-
-		// Token: 0x0400003B RID: 59
 		private global::System.Windows.Forms.DataGridView dataGridView1;
-
-		// Token: 0x0400003C RID: 60
 		private global::System.Windows.Forms.DataGridViewTextBoxColumn ID;
-
-		// Token: 0x0400003D RID: 61
 		private global::System.Windows.Forms.DataGridViewTextBoxColumn Date;
-
-		// Token: 0x0400003E RID: 62
 		private global::System.Windows.Forms.DataGridViewTextBoxColumn Sdesks;
-
-		// Token: 0x0400003F RID: 63
 		private global::System.Windows.Forms.DataGridViewTextBoxColumn tdesks;
-
-		// Token: 0x04000040 RID: 64
 		private global::System.Windows.Forms.DataGridViewTextBoxColumn Floor;
-
-		// Token: 0x04000041 RID: 65
 		private global::System.Windows.Forms.DataGridViewTextBoxColumn Handles;
-
-		// Token: 0x04000042 RID: 66
 		private global::System.Windows.Forms.DataGridViewTextBoxColumn Carpet;
-
-		// Token: 0x04000043 RID: 67
 		private global::System.Windows.Forms.DataGridViewTextBoxColumn BroomC;
-
-		// Token: 0x04000044 RID: 68
 		private global::System.Windows.Forms.DataGridViewTextBoxColumn BroomS;
-
-		// Token: 0x04000045 RID: 69
 		private global::System.Windows.Forms.DataGridViewTextBoxColumn Sani;
-
-		// Token: 0x04000046 RID: 70
 		private global::System.Windows.Forms.Button button1;
-
-		// Token: 0x04000047 RID: 71
 		private global::System.Drawing.Printing.PrintDocument printDocument1;
-
-		// Token: 0x04000048 RID: 72
 		private global::System.Windows.Forms.Button button2;
 	}
 }

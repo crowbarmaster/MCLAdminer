@@ -1,9 +1,7 @@
 ﻿namespace MCL_Adminer
 {
-	// Token: 0x0200000A RID: 10
 	public partial class ReportSelect : global::System.Windows.Forms.Form
 	{
-		// Token: 0x06000032 RID: 50 RVA: 0x00005AEC File Offset: 0x00003CEC
 		protected override void Dispose(bool disposing)
 		{
 			bool flag = disposing && this.components != null;
@@ -13,8 +11,6 @@
 			}
 			base.Dispose(disposing);
 		}
-
-		// Token: 0x06000033 RID: 51 RVA: 0x00005B24 File Offset: 0x00003D24
 		private void InitializeComponent()
 		{
 			this.listBox1 = new global::System.Windows.Forms.ListBox();
@@ -69,23 +65,11 @@
 			base.ResumeLayout(false);
 			base.PerformLayout();
 		}
-
-		// Token: 0x04000051 RID: 81
 		private global::System.ComponentModel.IContainer components = null;
-
-		// Token: 0x04000052 RID: 82
 		private global::System.Windows.Forms.ListBox listBox1;
-
-		// Token: 0x04000053 RID: 83
 		private global::System.Windows.Forms.ListBox listBox2;
-
-		// Token: 0x04000054 RID: 84
 		private global::System.Windows.Forms.Button button1;
-
-		// Token: 0x04000055 RID: 85
 		private global::System.Windows.Forms.Label label1;
-
-		// Token: 0x04000056 RID: 86
 		private global::System.Windows.Forms.Label label2;
 	}
 }

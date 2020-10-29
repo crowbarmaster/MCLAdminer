@@ -1,9 +1,7 @@
 ﻿namespace MCL_Adminer
 {
-	// Token: 0x02000003 RID: 3
 	public partial class UserForm : global::System.Windows.Forms.Form
 	{
-		// Token: 0x0600000B RID: 11 RVA: 0x00002B9C File Offset: 0x00000D9C
 		protected override void Dispose(bool disposing)
 		{
 			bool flag = disposing && this.components != null;
@@ -14,7 +12,6 @@
 			base.Dispose(disposing);
 		}
 
-		// Token: 0x0600000C RID: 12 RVA: 0x00002BD4 File Offset: 0x00000DD4
 		private void InitializeComponent()
 		{
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -174,47 +171,19 @@
             this.PerformLayout();
 
 		}
-
-		// Token: 0x0400000C RID: 12
 		private global::System.ComponentModel.IContainer components = null;
-
-		// Token: 0x0400000D RID: 13
 		private global::System.Windows.Forms.TextBox textBox1;
-
-		// Token: 0x0400000E RID: 14
 		private global::System.Windows.Forms.TextBox textBox2;
-
-		// Token: 0x0400000F RID: 15
 		private global::System.Windows.Forms.Button button2;
-
-		// Token: 0x04000010 RID: 16
 		private global::System.Windows.Forms.Label label1;
-
-		// Token: 0x04000011 RID: 17
 		private global::System.Windows.Forms.Label label2;
-
-		// Token: 0x04000012 RID: 18
 		private global::System.Windows.Forms.Label label4;
-
-		// Token: 0x04000013 RID: 19
 		private global::System.Windows.Forms.TextBox textBox3;
-
-		// Token: 0x04000014 RID: 20
 		private global::System.Windows.Forms.TextBox textBox4;
-
-		// Token: 0x04000015 RID: 21
 		private global::System.Windows.Forms.Label label6;
-
-		// Token: 0x04000016 RID: 22
 		private global::System.Windows.Forms.Label label7;
-
-		// Token: 0x04000017 RID: 23
 		private global::System.Windows.Forms.Button button1;
-
-		// Token: 0x04000018 RID: 24
 		private global::System.Windows.Forms.TextBox textBox5;
-
-		// Token: 0x04000019 RID: 25
 		private global::System.Windows.Forms.Label label3;
 	}
 }

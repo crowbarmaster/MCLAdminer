@@ -1,9 +1,7 @@
 ﻿namespace MCL_Adminer
 {
-	// Token: 0x02000007 RID: 7
 	public partial class ManageUsers : global::System.Windows.Forms.Form
 	{
-		// Token: 0x0600001E RID: 30 RVA: 0x00003B68 File Offset: 0x00001D68
 		protected override void Dispose(bool disposing)
 		{
 			bool flag = disposing && this.components != null;
@@ -14,7 +12,6 @@
 			base.Dispose(disposing);
 		}
 
-		// Token: 0x0600001F RID: 31 RVA: 0x00003BA0 File Offset: 0x00001DA0
 		private void InitializeComponent()
 		{
 			this.listBox1 = new global::System.Windows.Forms.ListBox();
@@ -73,23 +70,11 @@
 			base.ResumeLayout(false);
 			base.PerformLayout();
 		}
-
-		// Token: 0x04000026 RID: 38
 		private global::System.ComponentModel.IContainer components = null;
-
-		// Token: 0x04000027 RID: 39
 		private global::System.Windows.Forms.ListBox listBox1;
-
-		// Token: 0x04000028 RID: 40
 		private global::System.Windows.Forms.Label label1;
-
-		// Token: 0x04000029 RID: 41
 		private global::System.Windows.Forms.Button button1;
-
-		// Token: 0x0400002A RID: 42
 		private global::System.Windows.Forms.Button button2;
-
-		// Token: 0x0400002B RID: 43
 		private global::System.Windows.Forms.Button button3;
 	}
 }

@@ -25,7 +25,6 @@ namespace MCL_Adminer
             connection = new MySqlConnection(connectionString);
         }
 
-        // Token: 0x0600003B RID: 59 RVA: 0x00006108 File Offset: 0x00004308
         private bool OpenConnection()
         {
             bool result;
@@ -54,7 +53,6 @@ namespace MCL_Adminer
             return result;
         }
 
-        // Token: 0x0600003C RID: 60 RVA: 0x00006170 File Offset: 0x00004370
         private bool CloseConnection()
         {
             bool result;
@@ -71,7 +69,6 @@ namespace MCL_Adminer
             return result;
         }
 
-        // Token: 0x0600003D RID: 61 RVA: 0x000061B4 File Offset: 0x000043B4
         public void Insert(string tableName, string[] keys, string[] values)
         {
             string query = "INSERT INTO " + tableName + " (";
@@ -95,7 +92,6 @@ namespace MCL_Adminer
             }
         }
 
-        // Token: 0x0600003E RID: 62 RVA: 0x00006298 File Offset: 0x00004498
         public void Update(string tableName, string[] data, string[] cond)
         {
             string query = "UPDATE " + tableName + " SET ";
@@ -122,7 +118,6 @@ namespace MCL_Adminer
             }
         }
 
-        // Token: 0x0600003F RID: 63 RVA: 0x00006380 File Offset: 0x00004580
         public void Delete(string tableName, string cond)
         {
             string query = "DELETE FROM " + tableName + " WHERE " + cond;
@@ -135,7 +130,6 @@ namespace MCL_Adminer
             }
         }
 
-        // Token: 0x06000040 RID: 64 RVA: 0x000063C8 File Offset: 0x000045C8
         public List<string[]> Select(string tableName, string[] select, string[] cond)
         {
             string query = "SELECT ";
@@ -182,7 +176,6 @@ namespace MCL_Adminer
             return result;
         }
 
-        // Token: 0x06000041 RID: 65 RVA: 0x0000650C File Offset: 0x0000470C
         public int Count(string tableName)
         {
             string query = "SELECT Count(*) FROM " + tableName;
@@ -204,7 +197,6 @@ namespace MCL_Adminer
             return result;
         }
 
-        // Token: 0x06000042 RID: 66 RVA: 0x00006578 File Offset: 0x00004778
         public void Backup()
         {
             try
@@ -262,7 +254,6 @@ namespace MCL_Adminer
             }
         }
 
-        // Token: 0x06000043 RID: 67 RVA: 0x00006740 File Offset: 0x00004940
         public void Restore()
         {
             try
@@ -296,22 +287,11 @@ namespace MCL_Adminer
             }
         }
 
-        // Token: 0x04000060 RID: 96
         private MySqlConnection connection;
-
-        // Token: 0x04000061 RID: 97
         private string server;
-
-        // Token: 0x04000062 RID: 98
         private string database;
-
-        // Token: 0x04000063 RID: 99
         private string uid;
-
-        // Token: 0x04000064 RID: 100
         private string port;
-
-        // Token: 0x04000065 RID: 101
         private string password;
     }
 }

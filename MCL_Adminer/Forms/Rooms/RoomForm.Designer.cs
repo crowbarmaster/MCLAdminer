@@ -1,9 +1,7 @@
 ﻿namespace MCL_Adminer
 {
-	// Token: 0x02000002 RID: 2
 	public partial class RoomForm : global::System.Windows.Forms.Form
 	{
-		// Token: 0x06000005 RID: 5 RVA: 0x00002680 File Offset: 0x00000880
 		protected override void Dispose(bool disposing)
 		{
 			bool flag = disposing && this.components != null;
@@ -14,7 +12,6 @@
 			base.Dispose(disposing);
 		}
 
-		// Token: 0x06000006 RID: 6 RVA: 0x000026B8 File Offset: 0x000008B8
 		private void InitializeComponent()
 		{
 			this.textBox1 = new global::System.Windows.Forms.TextBox();
@@ -84,29 +81,13 @@
 			base.ResumeLayout(false);
 			base.PerformLayout();
 		}
-
-		// Token: 0x04000004 RID: 4
 		private global::System.ComponentModel.IContainer components = null;
-
-		// Token: 0x04000005 RID: 5
 		private global::System.Windows.Forms.TextBox textBox1;
-
-		// Token: 0x04000006 RID: 6
 		private global::System.Windows.Forms.Label label1;
-
-		// Token: 0x04000007 RID: 7
 		private global::System.Windows.Forms.Label label2;
-
-		// Token: 0x04000008 RID: 8
 		private global::System.Windows.Forms.TextBox textBox2;
-
-		// Token: 0x04000009 RID: 9
 		private global::System.Windows.Forms.Label label6;
-
-		// Token: 0x0400000A RID: 10
 		private global::System.Windows.Forms.Button button1;
-
-		// Token: 0x0400000B RID: 11
 		private global::System.Windows.Forms.CheckedListBox checkedListBox1;
 	}
 }
