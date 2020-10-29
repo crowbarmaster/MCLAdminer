@@ -9,7 +9,7 @@ namespace MCL_Adminer
 		{
 			get
 			{
-				if (_mainMenu == null)
+				if (_mainMenu == null || _mainMenu.IsDisposed)
 				{
                     _mainMenu = new MainMenuForm();
 				}
@@ -21,7 +21,7 @@ namespace MCL_Adminer
 		{
 			get
 			{
-				if (_manageRooms == null)
+				if (_manageRooms == null || _manageRooms.IsDisposed)
 				{
                     _manageRooms = new ManageRooms();
 				}
@@ -33,7 +33,7 @@ namespace MCL_Adminer
 		{
 			get
 			{
-				if (_manageUsers == null)
+				if (_manageUsers == null || _manageUsers.IsDisposed)
 				{
                     _manageUsers = new ManageUsers();
 				}
@@ -45,7 +45,7 @@ namespace MCL_Adminer
 		{
 			get
 			{
-				if (_userForm == null)
+				if (_userForm == null || _userForm.IsDisposed)
 				{
                     _userForm = new UserForm();
 				}
@@ -57,7 +57,7 @@ namespace MCL_Adminer
 		{
 			get
 			{
-				if (_roomForm == null)
+				if (_roomForm == null || _roomForm.IsDisposed)
 				{
                     _roomForm = new RoomForm();
 				}
@@ -69,7 +69,7 @@ namespace MCL_Adminer
 		{
 			get
 			{
-				if (_reportSelect == null)
+				if (_reportSelect == null || _reportSelect.IsDisposed)
 				{
                     _reportSelect = new ReportSelect();
 				}
@@ -81,16 +81,24 @@ namespace MCL_Adminer
 		{
 			get
 			{
-				if (_printReport == null)
+				if (_printReport == null || _printReport.IsDisposed)
 				{
                     _printReport = new PrintReport();
 				}
 				return _printReport;
 			}
-			set
-            {
-				_printReport = PrintReport;
-            }
+		}
+
+		public static UserRoomSelect UserRoomSelect
+		{
+			get
+			{
+				if (_userRoomSelect == null || _userRoomSelect.IsDisposed)
+				{
+                    _userRoomSelect = new UserRoomSelect();
+				}
+				return _userRoomSelect;
+			}
 		}
 
 		private static MainMenuForm _mainMenu;
@@ -99,6 +107,7 @@ namespace MCL_Adminer
 		private static ReportSelect _reportSelect;
 		private static PrintReport _printReport;
 		private static UserForm _userForm;
+		private static UserRoomSelect _userRoomSelect;
 		private static RoomForm _roomForm;
 	}
 }

@@ -46,7 +46,7 @@ namespace MCL_Adminer
 
 		private void button2_Click(object sender, EventArgs e)
         {
-			UserRoomSelect select = new UserRoomSelect();
+			UserRoomSelect select = FormProvider.UserRoomSelect;
 			select.user = WorkingUser;
 			select.Show();
         }

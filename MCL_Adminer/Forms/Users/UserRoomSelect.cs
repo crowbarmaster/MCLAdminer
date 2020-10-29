@@ -14,6 +14,12 @@ namespace MCL_Adminer
             button2.Click += delegate (object sender, EventArgs e) { button2_Click(sender, e); };
             button3.Click += delegate (object sender, EventArgs e) { button3_Click(sender, e); };
             Shown += OnShown;
+            FormClosing += delegate (object o, FormClosingEventArgs e)
+            {
+                UserForm users = FormProvider.UserForm;
+                users.Show();
+                Dispose();
+            };
         }
 
         private void button1_Click(object s, EventArgs e)
