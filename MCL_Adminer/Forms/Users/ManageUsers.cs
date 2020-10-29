@@ -1,19 +1,17 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace MCL_Adminer
 {
-	public partial class ManageUsers : Form
-	{
-		public ManageUsers()
-		{
-			InitializeComponent();
-			foreach (User user in Globals.UserList)
-			{
-				listBox1.Items.Add(user.fullName);
-			}
+    public partial class ManageUsers : Form
+    {
+        public ManageUsers()
+        {
+            InitializeComponent();
+            foreach (User user in Globals.UserList)
+            {
+                listBox1.Items.Add(user.fullName);
+            }
             button1.Click += Button1_Click;
             button2.Click += Button2_Click;
             button3.Click += Button3_Click;
@@ -31,11 +29,11 @@ namespace MCL_Adminer
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            if(listBox1.SelectedItem != null)
+            if (listBox1.SelectedItem != null)
             {
-                foreach(User user in Globals.UserList)
+                foreach (User user in Globals.UserList)
                 {
-                    if(listBox1.SelectedItem.ToString() == user.fullName)
+                    if (listBox1.SelectedItem.ToString() == user.fullName)
                     {
                         FormProvider.UserForm.WorkingUser = user;
                     }

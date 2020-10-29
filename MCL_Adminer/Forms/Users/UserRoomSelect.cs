@@ -39,7 +39,7 @@ namespace MCL_Adminer
             }
         }
 
-        private void button2_Click (object s, EventArgs e)
+        private void button2_Click(object s, EventArgs e)
         {
             int index = listBox2.SelectedIndex;
             if (listBox2.SelectedItem != null)
@@ -57,9 +57,9 @@ namespace MCL_Adminer
             }
         }
 
-        private void button3_Click (object s, EventArgs e)
+        private void button3_Click(object s, EventArgs e)
         {
-            if(user != null && listBox2.Items.Count > 0)
+            if (user != null && listBox2.Items.Count > 0)
             {
                 user.rooms = listBox1.Items.OfType<string>().ToArray();
             }
@@ -67,7 +67,7 @@ namespace MCL_Adminer
             Dispose();
         }
 
-        private void OnShown (object s, EventArgs e)
+        private void OnShown(object s, EventArgs e)
         {
             foreach (Room room in Globals.RoomList)
             {
