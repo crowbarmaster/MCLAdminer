@@ -7,7 +7,7 @@ namespace MCL_Adminer
     {
         public void LoadAll()
         {
-            List<string[]> query = SQL.Select("rooms", new string[] { "*" }, null);
+            List<string[]> query = new SQLHandler().Select("rooms", new string[] { "*" }, null);
             foreach (string[] rm in query)
             {
                 Room room = new Room();
@@ -54,6 +54,5 @@ namespace MCL_Adminer
         public bool hasCarpet = false;
         public bool hasBRoom = false;
         public bool hasSani = false;
-        private readonly SQLHandler SQL = new SQLHandler();
     }
 }

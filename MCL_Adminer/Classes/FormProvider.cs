@@ -6,11 +6,11 @@
         {
             get
             {
-                if (_mainMenu == null || _mainMenu.IsDisposed)
+                if (mainMenu == null || mainMenu.IsDisposed)
                 {
-                    _mainMenu = new MainMenuForm();
+                    mainMenu = new MainMenuForm();
                 }
-                return _mainMenu;
+                return mainMenu;
             }
         }
 
@@ -18,11 +18,11 @@
         {
             get
             {
-                if (_manageRooms == null || _manageRooms.IsDisposed)
+                if (manageRooms == null || manageRooms.IsDisposed)
                 {
-                    _manageRooms = new ManageRooms();
+                    manageRooms = new ManageRooms();
                 }
-                return _manageRooms;
+                return manageRooms;
             }
         }
 
@@ -30,11 +30,11 @@
         {
             get
             {
-                if (_manageUsers == null || _manageUsers.IsDisposed)
+                if (manageUsers == null || manageUsers.IsDisposed)
                 {
-                    _manageUsers = new ManageUsers();
+                    manageUsers = new ManageUsers();
                 }
-                return _manageUsers;
+                return manageUsers;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                if (_userForm == null || _userForm.IsDisposed)
+                if (userForm == null || userForm.IsDisposed)
                 {
-                    _userForm = new UserForm();
+                    userForm = new UserForm();
                 }
-                return _userForm;
+                return userForm;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                if (_roomForm == null || _roomForm.IsDisposed)
+                if (roomForm == null || roomForm.IsDisposed)
                 {
-                    _roomForm = new RoomForm();
+                    roomForm = new RoomForm();
                 }
-                return _roomForm;
+                return roomForm;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                if (_reportSelect == null || _reportSelect.IsDisposed)
+                if (reportSelect == null || reportSelect.IsDisposed)
                 {
-                    _reportSelect = new ReportSelect();
+                    reportSelect = new ReportSelect();
                 }
-                return _reportSelect;
+                return reportSelect;
             }
         }
 
@@ -78,11 +78,11 @@
         {
             get
             {
-                if (_printReport == null || _printReport.IsDisposed)
+                if (printReport == null || printReport.IsDisposed)
                 {
-                    _printReport = new PrintReport();
+                    printReport = new PrintReport();
                 }
-                return _printReport;
+                return printReport;
             }
         }
 
@@ -90,21 +90,21 @@
         {
             get
             {
-                if (_userRoomSelect == null || _userRoomSelect.IsDisposed)
+                if (userRoomSelect == null || userRoomSelect.IsDisposed)
                 {
-                    _userRoomSelect = new UserRoomSelect();
+                    userRoomSelect = new UserRoomSelect();
                 }
-                return _userRoomSelect;
+                return userRoomSelect;
             }
         }
 
-        private static MainMenuForm _mainMenu;
-        private static ManageRooms _manageRooms;
-        private static ManageUsers _manageUsers;
-        private static ReportSelect _reportSelect;
-        private static PrintReport _printReport;
-        private static UserForm _userForm;
-        private static UserRoomSelect _userRoomSelect;
-        private static RoomForm _roomForm;
+        private static MainMenuForm mainMenu;
+        private static ManageRooms manageRooms;
+        private static ManageUsers manageUsers;
+        private static ReportSelect reportSelect;
+        private static PrintReport printReport;
+        private static UserForm userForm;
+        private static UserRoomSelect userRoomSelect;
+        private static RoomForm roomForm;
     }
 }

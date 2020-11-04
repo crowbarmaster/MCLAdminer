@@ -73,7 +73,7 @@ namespace MCL_Adminer
                                     }
                                     outTime = MakeTwo(fixHour) + ":" + MakeTwo(Convert.ToInt32(fixTime[1])) + ":" + MakeTwo(Convert.ToInt32(fixTime[2])) + " " + suffix;
                                     DataGridViewRowCollection rows = DataGrid.Rows;
-                                    object[] values = new string[]
+                                    rows.Add(new string[]
                                     {
                                         kvp.Value[0],
                                         outTime,
@@ -85,8 +85,7 @@ namespace MCL_Adminer
                                         CharToBool(explode[5]),
                                         CharToBool(explode[6]),
                                         CharToBool(explode[7])
-                                    };
-                                    rows.Add(values);
+                                    });
                                 }
                             }
                         }
@@ -96,16 +95,18 @@ namespace MCL_Adminer
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog();
-            printPreviewDialog.Document = printDocument1;
-            printPreviewDialog.ShowDialog();
+            new PrintPreviewDialog
+            {
+            Document = printDocument1,
+           }.ShowDialog();
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            PrintDialog printDialog = new PrintDialog();
-            printDialog.Document = printDocument1;
-            printDialog.UseEXDialog = true;
-            if (DialogResult.OK == printDialog.ShowDialog())
+            if (DialogResult.OK == new PrintDialog
+            {
+                Document = printDocument1,
+                UseEXDialog = true
+            }.ShowDialog())
             {
                 printDocument1.Print();
             }

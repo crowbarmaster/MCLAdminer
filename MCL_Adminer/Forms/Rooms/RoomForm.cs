@@ -5,7 +5,6 @@ namespace MCL_Adminer
 {
     public partial class RoomForm : Form
     {
-        private readonly SQLHandler SQLHandler = new SQLHandler();
         public Room WorkingRoom = null;
         private readonly string[] bools = new string[]
         {
@@ -86,7 +85,7 @@ namespace MCL_Adminer
                     {
                         "rid=" + WorkingRoom.ID
                     };
-                    SQLHandler.Update("rooms", sqlData, cond);
+                    new SQLHandler().Update("rooms", sqlData, cond);
                     Console.WriteLine("Updated WorkingRoom ref!");
                     FormProvider.ManageRooms.Show();
                     Dispose();
@@ -139,7 +138,7 @@ namespace MCL_Adminer
                         "'" + room.tName + "'",
                         "'" + new string(data2) + "'"
                     };
-                    SQLHandler.Insert("rooms", Keys, Vals);
+                    new SQLHandler().Insert("rooms", Keys, Vals);
                     FormProvider.ManageRooms.Show();
                     Dispose();
                 }

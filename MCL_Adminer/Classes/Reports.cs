@@ -7,11 +7,10 @@ namespace MCL_Adminer
         public string userID;
         public string date;
         public Dictionary<string, Dictionary<string, Dictionary<string, string[]>>> data = new Dictionary<string, Dictionary<string, Dictionary<string, string[]>>>();
-        private readonly SQLHandler SQL = new SQLHandler();
 
         public void LoadAll()
         {
-            List<string[]> query = SQL.Select("records", new string[] { "*" }, null);
+            List<string[]> query = new SQLHandler().Select("records", new string[] { "*" }, null);
             foreach (string[] rpt in query)
             {
                 Reports reports = new Reports();
