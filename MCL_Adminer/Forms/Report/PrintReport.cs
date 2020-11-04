@@ -97,8 +97,6 @@ namespace MCL_Adminer
         private void button1_Click(object sender, EventArgs e)
         {
             PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog();
-            PrintDialog printDialog = new PrintDialog();
-            PageSetupDialog pageSetupDialog = new PageSetupDialog();
             printPreviewDialog.Document = printDocument1;
             printPreviewDialog.ShowDialog();
         }
@@ -107,7 +105,10 @@ namespace MCL_Adminer
             PrintDialog printDialog = new PrintDialog();
             printDialog.Document = printDocument1;
             printDialog.UseEXDialog = true;
-            printDialog.ShowDialog();
+            if (DialogResult.OK == printDialog.ShowDialog())
+            {
+                printDocument1.Print();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
