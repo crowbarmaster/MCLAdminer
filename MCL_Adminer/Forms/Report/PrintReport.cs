@@ -17,6 +17,7 @@ namespace MCL_Adminer
             printDocument1.BeginPrint += printDocument1_BeginPrint;
             button1.Click += button1_Click;
             button2.Click += button2_Click;
+            button3.Click += button3_Click;
             FormClosing += delegate (object o, FormClosingEventArgs e)
             {
                 FormProvider.MainMenu.Show();
@@ -101,6 +102,14 @@ namespace MCL_Adminer
             printPreviewDialog.Document = printDocument1;
             printPreviewDialog.ShowDialog();
         }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+            printDialog.Document = printDocument1;
+            printDialog.UseEXDialog = true;
+            printDialog.ShowDialog();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             new PageSetupDialog
