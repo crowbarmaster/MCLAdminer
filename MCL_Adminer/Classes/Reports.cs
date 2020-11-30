@@ -16,7 +16,7 @@ namespace MCL_Adminer
                 Reports reports = new Reports();
                 reports.userID = rpt[1];
                 reports.date = rpt[2];
-                string dataStr = rpt[3].Substring(0, rpt[3].Length - 1);
+                string dataStr = rpt[3].Substring(0, rpt[3].Length);
                 if (!reports.data.ContainsKey(rpt[1]))
                 {
                     reports.data.Add(rpt[1], new Dictionary<string, Dictionary<string, string[]>>());
