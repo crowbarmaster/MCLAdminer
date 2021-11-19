@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -16,11 +16,11 @@ namespace MCL_Adminer
 
         private void Initialize()
         {
-            server = "69.207.170.153";
+            server = "xx.xx.xx.xx";
             database = "mcl_db";
             uid = "mcl_db";
             port = "8236";
-            password = "MidlakesDB1.";
+            password = "password";
             string connectionString = "server=" + server + ";UID=" + uid + ";database=" + database + ";port=" + port + ";password=" + password;
             connection = new MySqlConnection(connectionString);
         }
